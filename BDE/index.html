@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDE Process Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        details > summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            transition: background-color 0.2s ease-in-out;
+            background-color: #f9fafb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        details[open] > summary {
+            background-color: #e5e7eb;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        details > summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.2s ease-in-out;
+        }
+        details[open] > summary::after {
+            content: '-';
+            transform: translateY(-50%) rotate(0deg);
+        }
+        .step-content {
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 0.75rem;
+            margin-top: -0.5rem;
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header Section -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">BDE Process: An Inside Look</h1>
+            <p class="text-lg text-gray-600">
+                Full information on what needs to be done inside each step.
+            </p>
+        </header>
+
+        <!-- Main Content with Collapsible Sections -->
+        <main>
+            <!-- Step 1: Lead Receiving -->
+            <details class="mb-6">
+                <summary class="flex items-center space-x-4">
+                    <span class="bg-purple-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold">1</span>
+                    <span class="text-xl font-semibold">Receiving Leads</span>
+                </summary>
+                <div class="step-content">
+                    <p class="mb-4">Receive a list of leads from the internal team on a daily or weekly basis. In this list, you will find these details:</p>
+                    <ul class="list-disc list-inside space-y-2 mb-4 ml-4">
+                        <li>Company Name, Contact Person: To reach the right person.</li>
+                        <li>Email, Phone: For direct communication.</li>
+                        <li>Business Size: To understand the client's scale and what their needs are.</li>
+                    </ul>
+                    <p class="font-semibold">How to Organize:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>Excel Sheet/Google Sheet: If the number of leads is low, you can track them with these. Be sure to add columns for Status (New, Contacted, Pitch) and Notes.</li>
+                        <li>CRM (Customer Relationship Management): Such as HubSpot or Salesforce. If there are a large number of leads, create a record for each lead in the CRM so everything remains organized.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Step 2: Initial Contact / Outreach -->
+            <details class="mb-6">
+                <summary class="flex items-center space-x-4">
+                    <span class="bg-blue-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold">2</span>
+                    <span class="text-xl font-semibold">Initial Contact / Outreach</span>
+                </summary>
+                <div class="step-content">
+                    <p class="mb-4">Making first contact with the lead. The goal here is only to generate interest, not to sell the entire product.</p>
+                    <p class="font-semibold mb-2">Tips for the job:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>Personalized Message: Do some research on the lead's company or their role. Send them a personalized message, like: "Hi [Name], I saw your company [Company Name]'s recent project. We are experts in [problem], and we might be able to help you..."</li>
+                        <li>Channels: Use email, LinkedIn, WhatsApp, or calls. In the beginning, contact them through just one channel.</li>
+                        <li>Value Proposition: Don't just tell them what your product is. Explain which of their problems it will solve.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Step 3: Product/Service Pitch -->
+            <details class="mb-6">
+                <summary class="flex items-center space-x-4">
+                    <span class="bg-green-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold">3</span>
+                    <span class="text-xl font-semibold">Product/Service Pitch</span>
+                </summary>
+                <div class="step-content">
+                    <p class="mb-4">When a client is interested, give them detailed information. This should include:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>Features & Benefits: Explain each feature by connecting it to a benefit. For example, "This feature makes your work faster, which will save you time."</li>
+                        <li>Pricing: Explain the pricing models in a clear and transparent manner. There should be no hidden charges.</li>
+                        <li>Case Studies/Previous Work: Show previous successful projects or case studies. This increases the client's trust.</li>
+                    </ul>
+                    <p class="mt-4 font-semibold">Important:</p>
+                    <p>Always focus on the client's problems and needs. Answer their questions, rather than just selling your product.</p>
+                </div>
+            </details>
+
+            <!-- Step 4: Follow-up -->
+            <details class="mb-6">
+                <summary class="flex items-center space-x-4">
+                    <span class="bg-yellow-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold">4</span>
+                    <span class="text-xl font-semibold">Follow-up</span>
+                </summary>
+                <div class="step-content">
+                    <p class="mb-4">Consistent follow-up is necessary to close a deal. Pay attention to timing and consistency.</p>
+                    <p class="font-semibold mb-2">Follow-up Tips:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>Timing: Don't disturb the client. Follow up after one or two days, and be sure to contact them once a week.</li>
+                        <li>Value Addition: Add some new value with each follow-up, such as: "Here is a new case study for you," or "We have added a new feature that might be helpful to you."</li>
+                        <li>Reminders: Set reminders in your calendar so no lead is missed.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Step 5: Deal Closing -->
+            <details class="mb-6">
+                <summary class="flex items-center space-x-4">
+                    <span class="bg-red-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold">5</span>
+                    <span class="text-xl font-semibold">Deal Closing</span>
+                </summary>
+                <div class="step-content">
+                    <p class="mb-4">When the client is ready to make a final decision, work on negotiation and deal finalization.</p>
+                    <p class="font-semibold mb-2">Tasks:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>Negotiate: Deal on pricing or terms.</li>
+                        <li>Contract: Forward the contract and billing details to the internal team.</li>
+                        <li>Finalization: Make all the next steps clear to the client, such as the onboarding process.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Step 6: Reporting -->
+            <details class="mb-6">
+                <summary class="flex items-center space-x-4">
+                    <span class="bg-gray-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold">6</span>
+                    <span class="text-xl font-semibold">Reporting</span>
+                </summary>
+                <div class="step-content">
+                    <p class="mb-4">Create a report to track your work and keep the team updated.</p>
+                    <p class="font-semibold mb-2">The report should contain these details:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>Contacts Made: How many new leads were contacted.</li>
+                        <li>Pitched Clients: How many clients were pitched.</li>
+                        <li>Follow-ups: How many follow-up calls/emails were made.</li>
+                        <li>Deals Closed/Pending: How many deals were closed and how many are in process.</li>
+                    </ul>
+                </div>
+            </details>
+        </main>
+    </div>
+</body>
+</html>
